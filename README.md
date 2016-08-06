@@ -1,2 +1,2 @@
 # tariqInspiry.github.io
-# This is a test repository for services workers
+This is a test repository for services workers
