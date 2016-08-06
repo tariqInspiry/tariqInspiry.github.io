@@ -1,5 +1,5 @@
 
-importScripts('serviceworker-cache-polyfill.js');
+importScripts('/js/serviceworker-cache-polyfill.js');
 
 var CACHE_NAME = 'Tariq-Khan-Site-Cache-v1';
 var urlsToCache = [
