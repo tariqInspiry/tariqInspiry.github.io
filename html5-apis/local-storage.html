@@ -31,22 +31,6 @@
                 document.getElementById("result4").innerHTML = "Sorry, your browser does not support web storage...";
             }
         }
-
-        // Check if browser supports Storage
-        if(typeof(Storage) !== "undefined") {
-
-            // Store key / value pair using setItem method
-            localStorage.setItem("firstName", "Tariq");
-
-            // OR
-            localStorage.lastName =  "Khan";
-
-            // Retrieve using getItem method
-            document.getElementById("result2").innerHTML = localStorage.getItem("firstName");
-
-            // OR
-            document.getElementById("result3").innerHTML = localStorage.lastName;
-        }
     </script>
 </head>
 <body>
@@ -65,6 +49,23 @@
         <p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
     </div>
     <div id="footer">
+        <script>
+            // Check if browser supports Storage
+            if(typeof(Storage) !== "undefined") {
+
+                // Store key / value pair using setItem method
+                localStorage.setItem("firstName", "Tariq");
+
+                // OR
+                localStorage.lastName =  "Khan";
+
+                // Retrieve using getItem method
+                document.getElementById("result2").innerHTML = localStorage.getItem("firstName");
+
+                // OR
+                document.getElementById("result3").innerHTML = localStorage.lastName;
+            }
+        </script>
     </div>
 </div>
 <script type='text/javascript' src='../js/jquery.min.js'></script>
