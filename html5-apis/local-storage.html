@@ -19,6 +19,19 @@
             }
         }
 
+        function clickCounter2() {
+            if(typeof(Storage) !== "undefined") {
+                if (sessionStorage.clickcount) {
+                    sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+                } else {
+                    sessionStorage.clickcount = 1;
+                }
+                document.getElementById("result4").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+            } else {
+                document.getElementById("result4").innerHTML = "Sorry, your browser does not support web storage...";
+            }
+        }
+
         // Check if browser supports Storage
         if(typeof(Storage) !== "undefined") {
 
@@ -46,6 +59,7 @@
         <div id="result"></div>
         <div id="result2"></div>
         <div id="result3"></div>
+        <div id="result4"></div>
         <p>Click the button to see the counter increase.</p>
         <p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
     </div>
