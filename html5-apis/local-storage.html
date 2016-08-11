@@ -18,6 +18,22 @@
                 document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
             }
         }
+
+        // Check if browser supports Storage
+        if(typeof(Storage) !== "undefined") {
+
+            // Store key / value pair using setItem method
+            localStorage.setItem("firstName", "Tariq");
+
+            // OR
+            localStorage.lastName =  "Khan";
+
+            // Retrieve using getItem method
+            document.getElementById("result2").innerHTML = localStorage.getItem("firstName");
+
+            // OR
+            document.getElementById("result3").innerHTML = localStorage.lastName;
+        }
     </script>
 </head>
 <body>
@@ -28,6 +44,8 @@
     <div id="content">
         <p><button onclick="clickCounter()" type="button">Click me!</button></p>
         <div id="result"></div>
+        <div id="result2"></div>
+        <div id="result3"></div>
         <p>Click the button to see the counter increase.</p>
         <p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
     </div>
