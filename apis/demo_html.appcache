@@ -1,0 +1,10 @@
+CACHE MANIFEST
+# 2016-08-11 v1.0.0
+/appcache/theme.css
+/appcache/main.js
+
+NETWORK:
+login.asp
+
+FALLBACK:
+/apis/ /local-storage.html
